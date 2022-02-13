@@ -40,14 +40,19 @@ choice = gets.chomp.to_i
 
 
 if choice == 1
+  puts "You chose addition."
   puts "#{first_num} added to #{second_num} is #{add(first_num, second_num)}"
 elsif choice == 2
+  puts "You chose subtraction."
   puts "#{first_num} minus #{second_num} is #{subtract(first_num, second_num)}"
 elsif choice == 3
+  puts "You chose multiplication."
   puts "#{first_num} multiplied by #{second_num} is #{multiply(first_num, second_num)}"
 elsif choice == 4
+  puts "You chose division."
   puts "#{first_num} divided by #{second_num} is #{divide(first_num, second_num)}"
 elsif choice == 5
+  puts "You chose modulo - how bold of you."
   puts "The remainder after dividing the first number by #{second_num} is #{modulo(first_num, second_num)}"
 else
   puts "I don't know how to do that."
