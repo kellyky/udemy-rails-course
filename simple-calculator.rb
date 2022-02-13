@@ -1,14 +1,19 @@
 # Simple Calculator
 puts "Simple Calculator"
-25.times { print "-" }
-puts
-puts "Enter the first number"
-first_num = gets.chomp.to_f
-puts "Enter the second number"
-second_num = gets.chomp.to_f
 
 25.times { print "-" }
 puts
+
+puts "Enter a first number"
+first_num = gets.chomp.to_f
+
+puts "Enter a second number"
+second_num = gets.chomp.to_f
+
+
+25.times { print "-" }
+puts
+
 
 def add (first_num, second_num)
   first_num + second_num
@@ -30,22 +35,20 @@ def modulo (first_num, second_num)
   first_num % second_num
 end
 
-# Addition
-puts "The first number added to the second number is #{add(first_num, second_num)}"
+puts "Do you want to (1) add, (2) subtract, (3) multiply, (4) divide, or (5) get the remainder? Enter the number for your choice."
+choice = gets.chomp.to_i
 
-# Subtraction
-puts "The first number minus the second number is #{subtract(first_num, second_num)}"
-puts
 
-# Multiplication
-puts "The first number multiplied by the second number is #{multiply(first_num, second_num)}"
-puts
-
-# Division
-puts "The first number divided by the second number is #{divide(first_num, second_num)}"
-puts
-
-# Modulus
-puts "The remainder after dividing the first number by the second number is #{modulo(first_num, second_num)}"
-puts
-
+if choice == 1
+  puts "#{first_num} added to #{second_num} is #{add(first_num, second_num)}"
+elsif choice == 2
+  puts "#{first_num} minus #{second_num} is #{subtract(first_num, second_num)}"
+elsif choice == 3
+  puts "#{first_num} multiplied by #{second_num} is #{multiply(first_num, second_num)}"
+elsif choice == 4
+  puts "#{first_num} divided by #{second_num} is #{divide(first_num, second_num)}"
+elsif choice == 5
+  puts "The remainder after dividing the first number by #{second_num} is #{modulo(first_num, second_num)}"
+else
+  puts "I don't know how to do that."
+end
