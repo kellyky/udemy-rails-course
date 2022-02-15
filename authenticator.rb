@@ -32,8 +32,6 @@ while attempts < 4
 
   authentication = auth_user(username, password, users)
   puts authentication
-  
-
 
   puts "Press n to quit or any other key to continue: "
   input = gets.chomp.downcase
@@ -41,5 +39,4 @@ while attempts < 4
   attempts += 1 
 end
 
-puts "Your username is #{username} and your password is #{password}"
-
+puts "You have exceeded the number of attempts" if attempts == 4
