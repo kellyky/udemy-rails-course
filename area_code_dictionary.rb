@@ -21,10 +21,10 @@ end
     
  
 # Get area code based on given hash and key
-def get_area_code(somehash, key)    # logic of this block does not work yet
-  puts "smile, you got this far! the real test is whether you'll see the area code"
-  city = somehash[key]
-  puts city
+def get_area_code(somehash, key)
+  area_code = somehash[key]
+  puts "The area code for #{key} is #{area_code}"
+  puts
 end
  
 # Execution flow
@@ -32,7 +32,6 @@ loop do
   puts "Do you want to lookup an area code based on a city name?(Y/N)"
   answer = gets.chomp.downcase
   break unless answer == 'y'
-  # get_city_names(dial_book)
   city = get_city_names(dial_book)
-  get_area_code(dial_book, city)    # callback works now
+  get_area_code(dial_book, city)  
 end
