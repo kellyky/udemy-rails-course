@@ -21,10 +21,10 @@ end
     
  
 # Get area code based on given hash and key
-def get_area_code(somehash, key)    # this block not working yet
-  somehash.each do |location|
-    puts "heehee"
-  end
+def get_area_code(somehash, key)    # logic of this block does not work yet
+  puts "smile, you got this far! the real test is whether you'll see the area code"
+  city = somehash[key]
+  puts city
 end
  
 # Execution flow
@@ -34,7 +34,5 @@ loop do
   break unless answer == 'y'
   # get_city_names(dial_book)
   city = get_city_names(dial_book)
-  get_area_code(dial_book, city)
-  # area_code = get_area_code(dial_book, city)
-  # puts area_code
+  get_area_code(dial_book, city)    # callback works now
 end
