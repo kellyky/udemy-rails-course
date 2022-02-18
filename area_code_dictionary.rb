@@ -15,7 +15,7 @@ dial_book = {
 def get_city_names(somehash)
   puts "Which city do you want the area code for?"
   puts somehash.keys
-  puts "Enter your selection"
+  puts "Enter your selection" 
   city = gets.chomp.downcase
 end
     
@@ -33,5 +33,9 @@ loop do
   answer = gets.chomp.downcase
   break unless answer == 'y'
   city = get_city_names(dial_book)
-  get_area_code(dial_book, city)  
+  if dial_book.include?(city)
+    get_area_code(dial_book, city)  
+  else
+    puts "You entered an invalid city name"
+  end
 end
